@@ -1,0 +1,416 @@
+:root {
+    --primary-color: rgb(30, 29, 29);
+    --secundary-color: rgb(46, 0, 0);
+    --border-radius: 4px;
+    --title-color: rgb(218, 218, 218);
+    --font-family:'Teko', sans-serif;
+    --font-size:25px;
+    --font-size-media:25px;
+    --font-titulo:4em;
+    --font-titulo-media:2em
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/***** Header *****/
+
+
+.header {
+    background-color: rgb(149 88 88);
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header .title {
+    color: var(--title-color);
+    font-size: 2em;
+    font-family: 'Teko', sans-serif;
+    font-weight: 900;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--title-color);
+    margin-block: 10px;
+    border-radius: var(--border-radius);
+    transition: transform .5s, opacity .25s;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/***** End Header *****/
+
+/***** Imagen *****/
+
+
+
+
+
+ul#image-travel {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	background: gray;
+	margin-right: 100%;
+}
+
+
+ul#image-travel li {
+	transition: 0.6s;
+	min-width: 100%;
+	color: white;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    max-height: 50em;
+}
+
+ul#image-travel li img {
+	width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+/***** End Imagen *****/
+
+/***** container *****/
+
+
+
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo-imagen{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.description-travel{
+   
+    width: 100%;
+    text-align: center;
+    height: 5em;
+    
+    margin: 0.5em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+
+.description-travel .titulo{
+    font-family: 'The Nautigal', cursive;
+    color: var(--title-color);
+    font-size: var(--font-titulo);
+}
+
+.form-sell{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: var(--secundary-color);
+    color: var(--title-color);
+    margin: 0;
+    width: 70%;
+    height: 30em;
+}
+
+.form{
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size);
+    padding: 1em;
+    width: 100%;
+}
+
+.form form input{
+    margin-bottom: 2em;
+    font-family: var(--font-family);
+    width: 15em;
+    font-size: var(--font-size);
+
+}
+
+.date-travel{
+    height: 20em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    padding: 1em;
+}
+
+.date-travel #date{
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.date-travel .destiny{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+
+}
+
+.buttons{
+    display: flex;
+    padding: 1em;
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .button-comprar{
+    margin-left: 1em;
+}
+
+
+
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em;
+    font-family: var(--font-family);
+    font-size: 2em;
+    width: 30%;
+}
+
+
+.form-contact input{
+    border-radius: var(--border-radius);
+    border: 0.5px solid black;
+    padding: 0.5em;
+     
+     ;
+}
+
+.form-contact textarea{
+    margin-top: 2em;
+    border-radius: var(--border-radius);
+}
+
+.form-contact button{
+    margin-top: 2em;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.css-button-shadow-border--grey {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #495057;
+  }
+  .css-button-shadow-border--grey:hover {
+    background-color: #6c757d;
+  }
+  .css-button-shadow-border--grey:active {
+    top: 2px;
+  }
+/**** End container *****/
+
+
+/***** Footer *****/
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em 3em 3em 0;
+    background-color: rgb(149 88 88);
+}
+
+.condition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+
+}
+
+.condition li{
+    list-style: none;
+    margin-bottom: 1em;
+    text-align: left;
+    
+}
+
+.lista1 ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.lista2 ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.redes h3{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--title-color);
+}
+
+
+.redes-imagenes{
+    margin-top:2em ;
+}
+
+
+.redes img{
+    width: 2em;
+    margin-left: 1em;
+    filter: invert(1);
+}
+
+.redes img:hover{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+/**** End Footer *****/
+
+
+
+
+
+
+@media (max-width:1440px) {
+
+
+    .description-travel{
+        margin: auto;
+    }
+
+.description-travel .titulo{
+    font-size: var(--font-titulo-media);
+}
+
+.form-sell{
+    font-size: var(--font-size-media);
+    flex-direction: column;
+    padding: 1em;
+    height: auto;
+    width: 100%;
+}
+
+
+.form form{
+    font-size: var(--font-size-media);
+}
+
+.form form input{
+    width: 100%;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.date-travel #date{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.form-contact{
+    width: 100%;
+}
+
+.redes{
+    margin-left: 2em;
+}
+
+.redes-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+}
+
