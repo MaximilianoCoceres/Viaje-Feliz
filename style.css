@@ -119,6 +119,7 @@ ul#image-travel li img {
     justify-content:center;
     align-items: center;
     width: 100%;
+    margin-top: -5px;
 }
 
 .titulo-imagen{
