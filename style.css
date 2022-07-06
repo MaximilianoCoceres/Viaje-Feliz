@@ -263,6 +263,10 @@ ul#image-travel li img {
     padding: 1em;
 }
 
+.date-travel label{
+    font-size: var(--font-size);
+}
+
 .date-travel #date{
     border-radius: var(--border-radius);
     border: none;
