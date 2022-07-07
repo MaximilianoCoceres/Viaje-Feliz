@@ -38,10 +38,13 @@
         <div class="description-travel">
             <div class="titulo">Sorprende a tu pareja, y elegi la escapada de fin de semana que se merecen.</div>
         </div>
-        <ul id="image-travel">
-            <li><img src="./imagenes/ciudad.jpg" alt="Imagen de una pareja en la ciudad" srcset=""></li>
-            <li><img src="./imagenes/montania.jpg" alt="Imagen de una pareja en la montaña" srcset=""></li>
-            <li><img src="./imagenes/playa.jpg" alt="Imagen de una pareja en la playa" srcset=""></li>
+        <ul id="image-travel" class="imagenes">
+            <li><img src="./imagenes/ciudad.jpg" alt="Imagen de una pareja en la ciudad" srcset="" class="imagenCiudad">
+            </li>
+            <li><img src="./imagenes/montania.jpg" alt="Imagen de una pareja en la montaña" srcset=""
+                    class="imagenMontana"></li>
+            <li><img src="./imagenes/playa.jpg" alt="Imagen de una pareja en la playa" srcset="" class="imagenPlaya">
+            </li>
         </ul>
     </div>
 
@@ -49,48 +52,56 @@
 
 
 
-        <div class="form-sell">
-            <div class="form">
-                <form action="">
-                    <label for="">Nombre:</label>
-                    <input type="text" name="" id="name" placeholder="Juan Perez">
-                    <label for="">Correo electrónico:</label>
-                    <input type="email" name="" id="email" placeholder="correo@electronico.com">
-                    <label for="">Cantidad de parejas:</label>
-                    <input type="number" name="" id="number">
-                </form>
-            </div>
+        <form action="" class="form-sell">
             <div class="date-travel">
                 <label for="fecha">Fecha:</label>
                 <input type="date" name="" id="date">
                 <div class="destiny">
                     <div>
-                        <input type="radio" name="radio" id="ciudad">
+                        <input type="radio" name="radio" id="ciudad" required>
                         <label for="">Ciudad</label>
 
                     </div>
                     <div>
-                        <input type="radio" name="radio" id="montaña">
+                        <input type="radio" name="radio" id="montaña" required>
                         <label for="">Montaña</label>
 
                     </div>
                     <div>
-                        <input type="radio" name="radio" id="playa">
+                        <input type="radio" name="radio" id="playa" required>
                         <label for="">Playa</label>
 
                     </div>
                 </div>
-                <div class="buttons">
-                    <div class="button-price">
-                        <button class="css-button-shadow-border--grey">Calcular Precio</button>
-                    </div>
-                    <div class="button-comprar">
-                        <button class="css-button-shadow-border--grey">Comprar</button>
+            </div>
+
+            <div class="form">
+                <div class="form-inner">
+                    <label for="">Nombre:</label>
+                    <input type="text" name="" id="name" placeholder="Juan Perez" required>
+                    <label for="">Correo electrónico:</label>
+                    <input type="email" name="" id="email" placeholder="correo@electronico.com" required>
+                    <label for="">Cantidad de parejas:</label>
+                    <input type="number" name="" id="cantidad" required>
+                </div>
+
+
+            </div>
+            <div class="buttons">
+                <div class="button-price">
+                    <button type="button" class="css-button-shadow-border--grey calcular">Calcular Precio</button>
+                </div>
+                <div class="button-comprar">
+                    <button type="submit" class="css-button-shadow-border--grey">Comprar</button>
+                </div>
+                <div class="resultadoContainer">
+                    <h4>El precio es:</h4>
+                    <div id="resultado">
+
                     </div>
                 </div>
             </div>
-
-        </div>
+        </form>
         <form action="" class="form-contact">
             <h3>¿Tienes dudas?</h3>
             <label for="">Nombre</label>
