@@ -257,7 +257,6 @@ ul#image-travel li img {
 
 .date-travel {
     width: 50%;
-    margin-top: 3em;
     display: flex;
     flex-direction: column;
     font-family: var(--font-family);
@@ -266,6 +265,7 @@ ul#image-travel li img {
 
 .date-travel label {
     font-size: var(--font-size);
+    margin-top: 1em;
 }
 
 .date-travel #date {
@@ -295,6 +295,7 @@ ul#image-travel li img {
     margin: 1em;
     align-items: center;
     width: 100%;
+    margin-top: 0;
 }
 
 .buttons .button-comprar {
@@ -387,6 +388,12 @@ ul#image-travel li img {
     border: 1px solid #ddd;
     background-color: #fff;
     border-radius: var(--border-radius);
+    
+}
+
+.resultadoContainer label{
+    font-family: var(--font-family);
+    font-size: 14px;
     
 }
 
@@ -547,6 +554,11 @@ ul#image-travel li img {
     #resultado{
         height: 50px;
         font-size: 1.5em;
+    }
+
+    .resultadoContainer{
+        padding-left: 0;
+        margin-top: 3em;
     }
 
     .buttons .button-comprar{
