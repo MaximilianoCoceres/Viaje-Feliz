@@ -1,7 +1,5 @@
 const hamburgerMenu = document.querySelector(".hamburger");
 const navMenu = document.querySelector('.navigation');
-
-
 const ciudad = document.getElementById('ciudad');
 const montana = document.getElementById('montaña');
 const playa = document.getElementById('playa');
@@ -23,43 +21,36 @@ const menuIsActive = () => {
 const cambioImagen = ()=>{
     if(montana.checked){
         imagenes.style.transform="translate(-100%)";
-    } else if (playa.checked){
+    } else if (ciudad.checked){
         imagenes.style.transform="translate(-200%)"
-    } else{
+    } else if(playa.checked){
         imagenes.style.transform="translate(0)"
     }
 
-    // switch(lugar){
-    //     case montana.checked:
-    //         imagenes.style.transform="translate(-100%)";
-    //     case playa.checked:
-    //         imagenes.style.transform="translate(-200%)";
-    //     defalut:
-    //     imagenes.style.transform="translate(0)";
-    // }
 }
+
+let playaValue = 120;
+let montanaValue = 150;
+let ciudadValue = 100;
+let respuesta = 0
 
 
 
 const calculoPrecio = ()=>{
-    const cantidadParejas = document.getElementById('cantidad').value;
-    let playa = 120;
-    let montana = 150;
-    let ciudad = 100;
-    if(playa){
-        let respuesta = playa * cantidadParejas;
-        const resultado = document.getElementById('resultado');
-        resultado.innerText = `€` + respuesta;
-    }else if(montana){
-        let respuesta = montana * cantidadParejas;
-        const resultado = document.getElementById('resultado');
-        resultado.innerText =  `€` +respuesta;
-    }else{
-        let respuesta = ciudad * cantidadParejas;
-        const resultado = document.getElementById('resultado');
-        resultado.innerText = `€` + respuesta;
+    let cantidadParejas = document.getElementById('cantidad').value;
+
+    if(playa.checked){
+         respuesta = playaValue * cantidadParejas;  
+    }else if(montana.checked){
+         respuesta = montanaValue * cantidadParejas;
+    }else if(ciudad.checked){
+         respuesta = ciudadValue * cantidadParejas;  
     }
+    let resultado = document.getElementById('resultado');
+    resultado.innerText = `€` + respuesta;
+
 }
+
 
 hamburgerMenu.addEventListener(`click`, menuIsActive);
 btnCalcular.addEventListener('click',calculoPrecio);
